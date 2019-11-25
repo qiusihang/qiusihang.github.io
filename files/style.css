@@ -7,23 +7,30 @@ html,body{
 .mainbody{
 	margin: 20px auto;
 	max-width: 1000px;
+	border-radius: 5px;
 	font-family: helvetica, serif;
 	background: #ffffff;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .header{
-	padding: 50px;
+	padding-top: 50px;
+    padding-bottom: 20px;
+	border-radius: 5px 5px 0 0;
 	text-align: center;
+    background: #f2f2f2;
+    color: #4d4d4d;
+	font-size: 14px;
 }
 
 #header-img{
 	max-width: 100%;
 	border-radius: 5px;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .content{
+	padding: 30px;
 	text-align: left;
 	font-size: 14px;
 	line-height: 24px;
@@ -36,6 +43,11 @@ html,body{
 
 h1{
 	font-size: 24px;
+    color: #336699;
+}
+h2{
+	font-size: 16px;
+    color: #336699;
 }
 
 a:link {
