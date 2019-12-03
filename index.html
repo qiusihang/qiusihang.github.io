@@ -60,8 +60,10 @@
 
 			<script>
 				window.onload = function() {
-					var max_imgs = 9;
-					document.getElementById("header-img").src = "./files/img/" + (1 + Math.floor(Math.random() * max_imgs)) + ".jpg";
+					// var max_imgs = 9;
+					// document.getElementById("header-img").src = "./files/img/" + (1 + Math.floor(Math.random() * max_imgs)) + ".jpg";
+					var d = new Date().getDay();
+					document.getElementById("header-img").src = "./files/img/" + ((d%7)+1) + ".jpg";
 				}
 			</script>
 		</div>
