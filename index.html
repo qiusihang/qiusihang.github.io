@@ -9,66 +9,108 @@
 </head>
 
 <body>
+
 	<div class="mainbody">
 
-		<div class="header">
-			<img id="header-img" src="" width="800px"><br /><br />
-			<h1 style="text-align: center;"><strong>SIHANG QIU</strong></h1>
-			<p style="text-align: center;">PhD candidate, Delft University of Technology</p>
+		<div class="header" style="padding-bottom: 0px;">
+			<img id="header-img" src="" width="800px"><br><br>
 		</div>
 
-		<div class="content">
-			<p>
-				I am a PhD candidate at the Web Information Systems group of the Faculty of Engineering, Mathematics and Computer Science (EEMCS/EWI), Delft University of Technology.
-				My PhD topic focuses on Crowdsourcing for urban data. I also have broad interests in Human Computation and Human-Computer Interaction.
-			</p>
+		<div id="cv">
+			<div class="header" style="padding-top: 20px;">
+				<center>
+					<h1><strong>SIHANG QIU</strong></h1>
+					<p>PhD candidate, Delft University of Technology <span onclick="download_cv()" style="cursor:pointer">[<u>CV</u>]</span></p>
+				</center>
+			</div>
 
-			<hr><h2 style="text-align: center;"><strong>Publications</strong></h2>
-			<center><p><i>2019</i></p></center>
-			<ul>
-				<li>
-					<b>Understanding Conversational Style in Conversational Microtask Crowdsourcing.</b>
-					<br />Sihang Qiu, Ujwal Gadiraju, Alessandro Bozzon.<br />
-					<i>HCOMP 2019 WiP.</i> <a href="./files/publications/hcomp2019wip_conversation.pdf"><div class="small-link">[PDF]</div></a>
-				</li>
-				<li>
-					<b>Chatterbox: Conversational Interfaces for Microtask Crowdsourcing.</b>
-					<br />Panagiotis Mavridis, Owen Huang, Sihang Qiu, Ujwal Gadiraju, Alessandro Bozzon.<br />
-					<i>UMAP 2019.</i> <a href="./files/publications/umap2019_chatterbox.pdf"><div class="small-link">[PDF]</div></a>
-				</li>
-				<li>
-					<b>Crowd-Mapping Urban Objects from Street-Level Imagery.</b>
-					<br />Sihang Qiu, Achilleas Psyllidis, Alessandro Bozzon, Geert-Jan Houben.<br />
-					<i>WWW 2019.</i> <a href="./files/publications/www2019_crowdmapping.pdf"><div class="small-link">[PDF]</div></a>
-					<a href="../crowdmapping/index.html"><div class="small-link">[Webpage]</div></a>
-				</li>
-			</ul>
-			<center><p><i>2018</i></p></center>
-			<ul>
-				<li>
-					<b>Same, Same, but Different: Algorithmic Diversification of Viewpoints in News.</b>
-					<br />Nava Tintarev, Emily Sullivan, Dror Guldin, Sihang Qiu, Daan Odjik.<br />
-					<i>UMAP 2018 Workshop.</i>
-				</li>
-			</ul>
+			<div class="content">
+				<p>
+					I am a PhD candidate at the Web Information Systems group of the Faculty of Engineering, Mathematics and Computer Science (EEMCS/EWI), Delft University of Technology.
+					 My PhD topic focuses on Crowdsourcing for urban data. I also have broad interests in Human Computation and Human-Computer Interaction.
+				</p>
 
-			<hr><h2 style="text-align: center;"><strong>Contact</strong></h2>
-			<ul>
-				<li>Email: <a href="mailto:s.qiu-1@tudelft.nl">s.qiu-1@tudelft.nl</a></li>
-				<li>Address: Room W4.920, Building 28, Van Mourik Broekmanweg 6, 2628 XE Delft, the Netherlands</li>
-			</ul>
+				<hr>
+				<center><h2><strong>Publications</strong></h2></center>
+				<!-- <center><p><i>2019</i></p></center> -->
+				<ul>
+					<li>
+						<b>Understanding Conversational Style in Conversational Microtask Crowdsourcing.</b>
+						<div>Sihang Qiu, Ujwal Gadiraju, Alessandro Bozzon.</div>
+						<i>HCOMP 2019 WiP.</i> <a href="./files/publications/hcomp2019wip_conversation.pdf"><span>[PDF]</span></a>
+					</li>
+					<li>
+						<b>Chatterbox: Conversational Interfaces for Microtask Crowdsourcing.</b>
+						<div>Panagiotis Mavridis, Owen Huang, Sihang Qiu, Ujwal Gadiraju, Alessandro Bozzon.</div>
+						<i>UMAP 2019.</i> <a href="./files/publications/umap2019_chatterbox.pdf"><span>[PDF]</span></a>
+					</li>
+					<li>
+						<b>Crowd-Mapping Urban Objects from Street-Level Imagery.</b>
+						<div>Sihang Qiu, Achilleas Psyllidis, Alessandro Bozzon, Geert-Jan Houben.</div>
+						<i>WWW 2019.</i> <a href="./files/publications/www2019_crowdmapping.pdf"><span>[PDF]</span></a>
+						<a href="../crowdmapping/index.html"><span>[Webpage]</span></a>
+					</li>
+				<!-- </ul>
+				<center><p><i>2018</i></p></center>
+				<ul> -->
+					<li>
+						<b>Same, Same, but Different: Algorithmic Diversification of Viewpoints in News.</b>
+						<div>Nava Tintarev, Emily Sullivan, Dror Guldin, Sihang Qiu, Daan Odjik.</div>
+						<i>UMAP 2018 Workshop.</i>
+					</li>
+				</ul>
 
-			<script>
-				window.onload = function() {
-					// var max_imgs = 9;
-					// document.getElementById("header-img").src = "./files/img/" + (1 + Math.floor(Math.random() * max_imgs)) + ".jpg";
-					var d = new Date().getDay();
-					document.getElementById("header-img").src = "./files/img/" + ((d%7)+1) + ".jpg";
-				}
-			</script>
+				<hr>
+				<center><h2><strong>Contact</strong></h2></center>
+				<ul>
+					<li>Email: <a href="mailto:s.qiu-1@tudelft.nl">s.qiu-1@tudelft.nl</a></li>
+					<li>Address: Room W4.920, Building 28, Van Mourik Broekmanweg 6, 2628 XE Delft, the Netherlands</li>
+				</ul>
+			</div>
 		</div>
+
 	</div>
 
+	<script src="./files/js/html2canvas.js"></script>
+	<script src="./files/js/jspdf.min.js"></script>
+	<script>
+		window.onload = function() {
+			// var max_imgs = 9;
+			// document.getElementById("header-img").src = "./files/img/" + (1 + Math.floor(Math.random() * max_imgs)) + ".jpg";
+			var d = new Date().getDay();
+			document.getElementById("header-img").src = "./files/img/" + ((d%7)+1) + ".jpg";
+		}
+		var download_cv = function() {
+			var doc = new jsPDF();
+			var elementHandler = {
+				"#ignorePDF": function (element, renderer) { return true; }
+			};
+			var text = document.getElementById("cv").innerHTML;
+			while ( true ) {
+				var i = text.indexOf("<a");
+				if ( i < 0 ) break;
+				var j = text.indexOf("</a>");
+				var a = text.substring(i, j+4);
+				if ( a.includes("@")) break;
+				text = text.replace(a,"");
+			}
+			text = text.replace("[<u>CV</u>]","");
+			text = text.split("\n").join("");
+			text = text.split("\t").join("");
+			text = text.split("<span>[PDF]</span>").join("");
+			text = text.split("<span>[Webpage]</span>").join("");
+			text = text.split("</i> ").join("</i>");
+			text = text.split("<p>").join("");
+			text = text.split("</p>").join("<br>");
+			text = "<div style=\"font-size:14px;line-height:16px\">"+text+"</div>";
+			console.log(text);
+			doc.fromHTML(text, 10, 10, {
+				"width": 180,
+				'elementHandlers': elementHandler
+			});
+			doc.save("cv_sihang_qiu.pdf");
+		}
+	</script>
 </body>
 
 </html>
