@@ -31,6 +31,7 @@
 				</p>
 
 				<hr>
+				<!--section-->
 				<center><h2><strong>Publications</strong></h2></center>
 				<!-- <center><p><i>2019</i></p></center> -->
 				<ul>
@@ -71,13 +72,16 @@
 						<i>UMAP 2018 Workshop.</i> Singapore. <a href="https://pure.tudelft.nl/admin/files/52000140/Same_Same_but_Different.pdf"><span>[PDF]</span></a>
 					</li>
 				</ul>
+				<!--section-->
 
 				<hr>
+				<!--section-->
 				<center><h2><strong>Contact</strong></h2></center>
 				<ul>
 					<li>Email: <a href="mailto:s.qiu-1@tudelft.nl">s.qiu-1@tudelft.nl</a></li>
 					<li>Address: Room W4.920, Building 28, Van Mourik Broekmanweg 6, 2628 XE Delft, the Netherlands</li>
 				</ul>
+				<!--section-->
 			</div>
 		</div>
 
@@ -98,6 +102,12 @@
 				"#ignorePDF": function (element, renderer) { return true; }
 			};
 			var text = document.getElementById("cv").innerHTML;
+			var text_array = text.split("<!--section-->");
+			var publications = text_array[1];
+			var contact = text_array[3];
+			text_array[3] = publications;
+			text_array[1] = contact;
+			text = text_array.join("");
 			while ( true ) {
 				var i = text.indexOf("<a");
 				if ( i < 0 ) break;
@@ -115,7 +125,7 @@
 			text = text.split("<p>").join("");
 			text = text.split("</p>").join("<br>");
 			text = "<div style=\"font-size:14px;line-height:16px\">"+text+"</div>";
-			console.log(text);
+			// console.log(text);
 			doc.fromHTML(text, 10, 10, {
 				"width": 180,
 				'elementHandlers': elementHandler
