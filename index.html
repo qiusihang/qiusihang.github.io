@@ -20,7 +20,15 @@
 			<div class="header" style="padding-top: 20px;">
 				<center>
 					<h1><strong>SIHANG QIU</strong></h1>
-					<p>PhD candidate, Delft University of Technology <span onclick="download_cv()" style="cursor:pointer">[<u>CV</u>]</span></p>
+					<p>
+					<!--section-->
+						PhD candidate, Delft University of Technology <span onclick="download_cv()" style="cursor:pointer">[<u>CV</u>]</span></p>
+					<!--section-->
+					<p>
+						<a href="https://twitter.com/qiusihang" target="_blank"><img src="./files/img/logos/twitter.png" height="30"/></a>
+						<a href="https://scholar.google.com/citations?user=sDqDmq8AAAAJ&hl=en" target="_blank"><img src="./files/img/logos/google_scholar.png" height="30"/></a>
+						<a href="https://github.com/qiusihang" target="_blank"><img src="./files/img/logos/github.png" height="30"/></a>
+					</p>
 				</center>
 			</div>
 
@@ -65,7 +73,7 @@
 					<li>
 						<b>VirtualCrowd: A Simulation Platform for Microtask Crowdsourcing Campaigns.</b>
 						<div>Sihang Qiu, Alessandro Bozzon, Geert-Jan Houben.</div>
-						<i>WWW 2020 Demo.</i> Taipei. <a href="./files/publications/www2020virtualcrowd.pdf"><span>[PDF]</span></a>
+						<i>WWW 2020.</i> Taipei. <a href="./files/publications/www2020virtualcrowd.pdf"><span>[PDF]</span></a>
 						<a href="https://github.com/qiusihang/vcrowd"><span>[Webpage]</span></a>
 					</li>
 					<li>
@@ -96,7 +104,7 @@
 					<li>
 						<b>Same, Same, but Different: Algorithmic Diversification of Viewpoints in News.</b>
 						<div>Nava Tintarev, Emily Sullivan, Dror Guldin, Sihang Qiu, Daan Odjik.</div>
-						<i>UMAP 2018 Workshop.</i> Singapore. <a href="./files/publications/umap2018_Same_Same_but_Different.pdf"><span>[PDF]</span></a>
+						<i>UMAP 2018.</i> Singapore. <a href="./files/publications/umap2018_Same_Same_but_Different.pdf"><span>[PDF]</span></a>
 					</li>
 				</ul>
 				<!--section-->
@@ -129,11 +137,13 @@
 				"#ignorePDF": function (element, renderer) { return true; }
 			};
 			var text = document.getElementById("cv").innerHTML;
+			text = text.split("<center><h2><strong>").join("<b><span style=\"font-size:16px\">").split("</strong></h2></center>").join("</span></b>");
 			var text_array = text.split("<!--section-->");
-			var publications = text_array[1];
-			var contact = text_array[3];
-			text_array[3] = publications;
-			text_array[1] = contact;
+			text_array[1] = "<i>" + text_array[1] + "</i>";
+			var publications = text_array[3];
+			var contact = "<br><br><br>"+text_array[5];
+			text_array[5] = publications;
+			text_array[3] = contact;
 			text = text_array.join("");
 			while ( true ) {
 				var i = text.indexOf("<a");
