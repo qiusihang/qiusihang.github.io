@@ -13,7 +13,10 @@
 	<div class="mainbody">
 
 		<div class="header" style="padding-bottom: 0px;">
-			<img id="header-img" src="" width="800px"><br><br>
+			<img id="header-img" src="" width="800px">
+			<center>
+				<img id="profile-img" src="./files/img/profile.jpg"></img>
+			</center>
 		</div>
 
 		<div id="cv">
@@ -126,7 +129,7 @@
 	<script src="./files/js/jspdf.min.js"></script>
 	<script>
 		window.onload = function() {
-			// var max_imgs = 9;
+			// var max_imgs = 7;
 			// document.getElementById("header-img").src = "./files/img/" + (1 + Math.floor(Math.random() * max_imgs)) + ".jpg";
 			var d = new Date().getDay();
 			document.getElementById("header-img").src = "./files/img/" + ((d%7)+1) + ".jpg";
