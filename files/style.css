@@ -5,12 +5,11 @@ html,body{
 }
 
 .mainbody{
-	margin: 20px auto;
-	max-width: 1000px;
-	border-radius: 5px;
+	margin: auto;
+	/* max-width: 1000px; */
 	font-family: helvetica, serif;
 	background: #ffffff;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); */
 }
 
 .header{
@@ -34,7 +33,10 @@ html,body{
 }
 
 .content{
-	padding: 30px;
+	padding: 10px;
+	padding-bottom: 30px;
+	margin: auto;
+	max-width: 1000px;
 	text-align: left;
 	font-size: 14px;
 	line-height: 24px;
