@@ -4,7 +4,7 @@ document.getElementById("header").innerHTML = '\
 			<center>\
 				<img id="profile-img" src="./files/img/profile.jpg"></img>\
 				<h1><strong>SIHANG QIU</strong></h1>\
-				<!-- <p><a href="mailto:sihangq@acm.org"><span style="color:#336699">sihangq@acm.org</span></a></p> -->\
+				<p><a href="mailto:sihangq@acm.org"><span style="color:#336699">sihangq@acm.org</span></a></p>\
 			</center>\
 		</div>\
 		\
