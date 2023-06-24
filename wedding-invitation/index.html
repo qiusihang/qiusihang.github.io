@@ -18,7 +18,11 @@
 	</div>
 
 	<div id="mainbody" style="display:none">
-
+		<div style="position:absolute;z-index:20;top:0px;width:100%;display:none">
+			<audio id="music" controls style="position:absolute;top:0px;left:50%;width:200px;transform:translate(-100px,0);">
+				<source src="Liebestraume.mp3" type="audio/mpeg">
+			</audio>
+		</div>
 		<div id="content">
 			<div style="position:absolute;top:50%;left:50%;width:95%;transform:translate(-50%, -50%);">
 				<center><img style="max-width:100%;max-height:100vh" src="images/content.jpg"/></center>
@@ -46,6 +50,7 @@
 	var click_cover = function() {
 		document.getElementById("mainbody").style.display = "block";
 		document.getElementById("cover").style.display = "none";
+		document.getElementById("music").play();
 	}
 	</script>
 
