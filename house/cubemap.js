@@ -39,19 +39,19 @@ function Cubemap(pre_url, post_url, container_id, options)
 
 	function ondown(e)
 	{
+		var rect = that.root.getClientRects()[0];
 		if(e.type == "touchstart")
 		{
 			document.addEventListener("touchmove",onmove);
 			document.addEventListener("touchend",onup);
+			last_pos = [ e.changedTouches[0].pageX - rect.left, e.changedTouches[0].pageY - rect.top ];
 		}
 		else
 		{
 			document.body.addEventListener("mousemove",onmove);
 			document.body.addEventListener("mouseup",onup);
+			last_pos = [ e.pageX - rect.left, e.pageY - rect.top ];
 		}
-
-		var rect = that.root.getClientRects()[0];
-		last_pos = [ e.pageX - rect.left, e.pageY - rect.top ];
 
 		e.stopPropagation();
 		e.preventDefault();
@@ -61,10 +61,14 @@ function Cubemap(pre_url, post_url, container_id, options)
 
 	function onmove(e)
 	{
-
-		var rect = that.root.getClientRects()[0];
-		var x = e.pageX - rect.left;
-		var y = e.pageY - rect.top;
+		var rect = that.root.getClientRects()[0], x, y;
+		if(e.type == "touchmove") {
+			x = e.changedTouches[0].pageX - rect.left;
+			y = e.changedTouches[0].pageY - rect.top;
+		} else {
+			x = e.pageX - rect.left;
+			y = e.pageY - rect.top;
+		}
 		var deltax = x - last_pos[0];
 		var deltay = y - last_pos[1];
 
