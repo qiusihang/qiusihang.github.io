@@ -15,11 +15,12 @@
 	<script type="text/javascript">
 		var dict = parse_query_string();
 		var room = "负一楼入户";
+		var resolution = "";
 		if ("room" in dict) room = dict["room"];
+		if ("resolution" in dict) resolution = "_"+dict["resolution"];
 		document.title = room;
 
-		var cubemap = new Cubemap("./"+room+"/pano_",".jpg","cubemap", {
-			low_post_url:"_low.jpg",
+		var cubemap = new Cubemap("./"+room+"/pano_",resolution+".jpg","cubemap", {
 			width:window.innerWidth,
 			height:window.innerHeight
 		});
