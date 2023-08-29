@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>水电图</title>
+	</head>
+<style> body, div { margin: 0; padding: 0 }</style>
+<body>
+<div id="cubemap" style="margin: 0"></div>
+<script type="text/javascript" src="cubemap.js"></script>
+<script type="text/javascript">
+	var dict = parse_query_string();
+	var room = "负一楼入户";
+	if ("room" in dict) room = dict["room"];
+	document.title = room;
+	var cubemap = new Cubemap("./"+room+"/pano_",".jpg","cubemap", {
+		width:document.body.offsetWidth,
+		height:document.body.offsetHeight
+	});
+	function parse_query_string() {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    var query_string = {};
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        var key = decodeURIComponent(pair[0]);
+        var value = decodeURIComponent(pair[1]);
+        if (typeof query_string[key] === "undefined") {
+            query_string[key] = decodeURIComponent(value);
+        } else if (typeof query_string[key] === "string") {
+            var arr = [query_string[key], decodeURIComponent(value)];
+            query_string[key] = arr;
+        } else {
+            query_string[key].push(decodeURIComponent(value));
+        }
+    }
+    return query_string;
+}
+</script>
+</body>
