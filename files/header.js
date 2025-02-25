@@ -15,7 +15,7 @@ document.getElementById("header").innerHTML = '\
 					<a href="https://dblp.org/pid/210/5795.html" target="_blank"><img src="./files/img/logos/dblp.png" height="30"/></a> &nbsp;\
 					<!-- <a href="https://www.researchgate.net/profile/Sihang_Qiu2" target="_blank"><img src="./files/img/logos/researchgate.png" height="30"/></a> &nbsp; -->\
 					<!-- <a href="https://github.com/qiusihang" target="_blank"><img src="./files/img/logos/github.png" height="30"/></a> &nbsp; -->\
-					<a href="https://twitter.com/qiusihang" target="_blank"><img src="./files/img/logos/twitter.png" height="30"/></a>\
+					<!-- <a href="https://twitter.com/qiusihang" target="_blank"><img src="./files/img/logos/twitter.png" height="30"/></a> -->\
 			</center>\
 		</div>\
 		\
@@ -23,6 +23,7 @@ document.getElementById("header").innerHTML = '\
 			<center>\
 				<table><tr>\
 					<th width="100px"><a style="text-decoration:none" href="index.html">ABOUT</a></th>\
+					<th width="150px"><a style="text-decoration:none" href="https://scholar.google.com/citations?hl=en&user=sDqDmq8AAAAJ&sortby=pubdate">PUBLICATIONS</a></th>\
 					<!-- <th width="150px"><a style="text-decoration:none" href="publications.html">PUBLICATIONS</a></th>\
 					<th width="80px"><a style="text-decoration:none" href="art.html">ART</a></th> -->\
 				</tr></table>\
