@@ -23,8 +23,8 @@ document.getElementById("header").innerHTML = '\
 			<center>\
 				<table><tr>\
 					<th width="100px"><a style="text-decoration:none" href="index.html">ABOUT</a></th>\
-					<th width="150px"><a style="text-decoration:none" href="publications.html">PUBLICATIONS</a></th>\
-					<th width="80px"><a style="text-decoration:none" href="art.html">ART</a></th>\
+					<!-- <th width="150px"><a style="text-decoration:none" href="publications.html">PUBLICATIONS</a></th>\
+					<th width="80px"><a style="text-decoration:none" href="art.html">ART</a></th> -->\
 				</tr></table>\
 			</center>\
 		</div>\
